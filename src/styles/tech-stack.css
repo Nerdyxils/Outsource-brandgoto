@@ -1,7 +1,6 @@
 /* Tech Stack Section Styles */
 .tech-stack {
   background: var(--bg-primary);
-  padding: var(--spacing-xxl) 0;
   position: relative;
   overflow: hidden;
 }

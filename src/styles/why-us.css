@@ -1,7 +1,6 @@
 /* Why Us Section Styles */
 .why-us {
   background: var(--bg-primary);
-  padding: var(--spacing-xxl) 0;
   position: relative;
 }
 

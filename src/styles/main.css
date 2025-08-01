@@ -139,6 +139,12 @@ p {
 /* Section Styles */
 .section {
   padding: var(--spacing-xxl) 0;
+  position: relative;
+}
+
+/* Consistent spacing between sections */
+.section + .section {
+  margin-top: 0;
 }
 
 .section-title {

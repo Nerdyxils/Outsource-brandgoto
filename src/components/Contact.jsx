@@ -262,21 +262,21 @@ Receive Tech Digest: ${formData.receiveTechDigest ? 'Yes' : 'No'}
                 <div className="timeline-step">
                   <div className="timeline-node"></div>
                   <div className="timeline-content">
-                    <p>An expert contacts you after thoroughly reviewing your requirements.</p>
+                    <p>Our expert team reviews your requirements and reaches out within 24 hours to discuss your vision and objectives.</p>
                   </div>
                 </div>
                 
                 <div className="timeline-step">
                   <div className="timeline-node"></div>
                   <div className="timeline-content">
-                    <p>If necessary, we provide you with a Non-Disclosure Agreement (NDA) and initiate the Discovery phase, ensuring maximum confidentiality and alignment on project objectives.</p>
+                    <p>We establish a secure NDA and conduct a comprehensive Discovery session to align on project scope, timeline, and technical requirements.</p>
                   </div>
                 </div>
                 
                 <div className="timeline-step">
                   <div className="timeline-node"></div>
                   <div className="timeline-content">
-                    <p>We provide a project proposal, including estimates, scope analysis, CVs, and more.</p>
+                    <p>You receive a detailed project proposal with technical specifications, timeline, cost estimates, and team profiles tailored to your needs.</p>
                   </div>
                 </div>
               </div>
