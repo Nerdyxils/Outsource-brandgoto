@@ -1,13 +1,19 @@
 {
   "name": "brandgoto-outsourcing",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "BrandGoto Tech Outsourcing - Custom Software Development & IT Consulting Services",
+  "keywords": ["tech outsourcing", "custom software development", "web development", "mobile app development", "IT consulting"],
+  "author": "BrandGoto",
+  "license": "MIT",
+  "homepage": "https://outsourcing.brandgoto.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && netlify deploy --prod --dir=dist"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
