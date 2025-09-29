@@ -46,40 +46,42 @@ const Contact = () => {
     }
 
     try {
-      // For now, we'll use mailto as specified, but this can be replaced with actual API call
-      const subject = 'New Project Request - BrandGoto Tech Outsourcing';
-      const body = `
-Name: ${formData.fullName}
-Work Email: ${formData.workEmail}
-Company: ${formData.companyName}
-Estimated Budget: ${formData.estimatedBudget}
-Project Description: ${formData.projectDescription}
-How did you hear about us: ${formData.howDidYouHear}
-Consent to Privacy Terms: ${formData.consentPersonalData ? 'Yes' : 'No'}
-Sign NDA: ${formData.signNDA ? 'Yes' : 'No'}
-Receive Tech Digest: ${formData.receiveTechDigest ? 'Yes' : 'No'}
-      `;
-      
-      const mailtoLink = `mailto:silas@brandgoto.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Log the form data for now (can be replaced with actual submission)
-      console.log('Form submitted:', formData);
-      
-      // Open email client
-      window.location.href = mailtoLink;
-      
-      setSubmitStatus('success');
-      setFormData({
-        fullName: '',
-        workEmail: '',
-        companyName: '',
-        estimatedBudget: '',
-        projectDescription: '',
-        howDidYouHear: '',
-        consentPersonalData: false,
-        signNDA: false,
-        receiveTechDigest: false
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xnngpywe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          workEmail: formData.workEmail,
+          companyName: formData.companyName,
+          estimatedBudget: formData.estimatedBudget,
+          projectDescription: formData.projectDescription,
+          howDidYouHear: formData.howDidYouHear,
+          consentPersonalData: formData.consentPersonalData,
+          signNDA: formData.signNDA,
+          receiveTechDigest: formData.receiveTechDigest,
+          _subject: 'New Project Request - BrandGoto Tech Outsourcing'
+        })
       });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          fullName: '',
+          workEmail: '',
+          companyName: '',
+          estimatedBudget: '',
+          projectDescription: '',
+          howDidYouHear: '',
+          consentPersonalData: false,
+          signNDA: false,
+          receiveTechDigest: false
+        });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');

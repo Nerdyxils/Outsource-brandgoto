@@ -1,49 +1,54 @@
 import '../styles/portfolio.css';
-import projectImage from '../assets/images/project-1.png';
+import projectImage1 from '../assets/images/1.png';
+import projectImage2 from '../assets/images/2.png';
+import projectImage3 from '../assets/images/3.png';
+import projectImage4 from '../assets/images/4.png';
+import projectImage5 from '../assets/images/5.png';
+import projectImage6 from '../assets/images/6.png';
 
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Automated Direct Material Risk Assessment",
-      technologies: "Snowflake, Talend, dbt",
-      tags: ["Data analytics", "dbt", "Git", "Integration", "Pharma", "Snowflake", "Tableau", "Talend", "Testing"],
-      image: projectImage
+      title: "Cropper Finance - DeFi Liquidity Platform",
+      technologies: "React, Solidity, Web3.js, Ethereum",
+      tags: ["Blockchain", "DeFi", "Smart contracts", "Web3", "Ethereum", "React", "JavaScript", "Solidity", "Liquidity pools", "Cryptocurrency"],
+      image: projectImage1
     },
     {
       id: 2,
-      title: "AI-Powered Point Cloud to BIM Conversion Solution",
-      technologies: "Python, Computer Vision, Cloud",
-      tags: ["Architecture", "Cloud", "Computer vision", "Data engineering", "Data management (DMS)", "DevOps", "Integration", "Python"],
-      image: projectImage
+      title: "Newton Supply Co - E-commerce Platform",
+      technologies: "Shopify, Liquid, JavaScript, CSS",
+      tags: ["E-commerce", "Shopify", "Liquid", "JavaScript", "CSS", "Web development", "Online store", "Payment integration", "Inventory management", "Responsive design"],
+      image: projectImage2
     },
     {
       id: 3,
-      title: "Salesforce Omnistudio Testing for Insurance Company",
-      technologies: "Salesforce, BPA, CRM",
-      tags: ["BPA", "CRM", "Insurance", "QA", "Salesforce"],
-      image: projectImage
+      title: "Spruce Health - AI-Powered Healthcare MVP",
+      technologies: "React, Node.js, GPT-4/5, Healthcare APIs",
+      tags: ["Healthcare", "AI", "GPT-4", "Machine learning", "React", "Node.js", "MVP", "Telemedicine", "Patient care", "Skincare recommendations"],
+      image: projectImage3
     },
     {
       id: 4,
-      title: "Carbon Capture Technology Solution",
-      technologies: "Python, IoT, Docker",
-      tags: ["Backend development", "Biotechnology", "Cloud", "Data management (DMS)", "Docker", "IoT", "Python"],
-      image: projectImage
+      title: "Trading Bot Platform - Automated Trading System",
+      technologies: "React, Python, FastAPI, WebSockets, PostgreSQL",
+      tags: ["Trading", "Crypto", "Stock market", "React", "Python", "FastAPI", "WebSockets", "PostgreSQL", "AWS", "Binance API", "Coinbase API", "Backtesting", "Risk management", "Real-time data"],
+      image: projectImage4
     },
     {
       id: 5,
-      title: "Mobile Game Development Services for Unity-based Projects",
-      technologies: "Unity, C#, AWS",
-      tags: ["AWS", "C#", "Entertainment", "Game", "Gaming", "Node.js", "Staff augmentation", "Unity"],
-      image: projectImage
+      title: "Real Estate Vendor Marketplace - B2B Platform",
+      technologies: "Next.js, Node.js, Elasticsearch, Stripe",
+      tags: ["B2B", "Marketplace", "Real estate", "Next.js", "Node.js", "ExpressJS", "Elasticsearch", "Stripe", "Vendor onboarding", "Subscription billing", "Search filtering", "Property management"],
+      image: projectImage5
     },
     {
       id: 6,
-      title: "Microlearning Platform for Professional and Personal Education",
-      technologies: "React, Node.js, Flutter",
-      tags: ["AWS", "Edtech", "Flutter", "Mobile development", "MongoDB", "Node.js", "React", "Stripe", "TypeScript", "Web development"],
-      image: projectImage
+      title: "Dala - Animated SaaS Landing Page",
+      technologies: "React, GSAP, Three.js, WebGL",
+      tags: ["SaaS", "Landing page", "React", "GSAP", "Three.js", "WebGL", "Animation", "Interactive design", "UI/UX", "Frontend development", "Visual effects", "Modern web design"],
+      image: projectImage6
     }
   ];
 
